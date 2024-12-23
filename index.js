@@ -17,7 +17,7 @@ app.post('/add', (req, res) => {
 
 app.post('/delete', (req, res) => {
     const newTodo = req.body.index
-    if (newTodo) todos.shift(newTodo);
+    newTodo.splice(index,1);
     res.redirect('/');
 })
 
