@@ -9,6 +9,10 @@ app.set('view engine' , 'ejs')
 
 let todos = [];
 
+app.post('/add', (req, res) => {
+    const 
+})
+
 app.get('/', (req,res) => {
     res.render('index', {todos})    
 })
