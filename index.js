@@ -10,7 +10,9 @@ app.set('view engine' , 'ejs')
 let todos = [];
 
 app.post('/add', (req, res) => {
-    const 
+    const  newTodo = req.body.todo;
+    if (newTodo) todos.push(newTodo);
+    res.redirect('/');
 })
 
 app.get('/', (req,res) => {
