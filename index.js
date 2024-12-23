@@ -15,6 +15,12 @@ app.post('/add', (req, res) => {
     res.redirect('/');
 })
 
+app.post('/delete', (req, res) => {
+    const index = req.body.index
+    todos.splice(index, 1)
+    res.redirect('/');
+})
+
 app.get('/', (req,res) => {
     res.render('index', {todos})    
 })
